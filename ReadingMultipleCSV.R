@@ -1,4 +1,4 @@
-pollutantmean <- function(directory, pollutant, id = 1:332){
+findcolumnmean <- function(directory, pollutant, id = 1:332){
   fil <- sprintf('%03d.csv', id)
   file <- paste("/Users/sreevalsansmenon/Downloads", directory, fil, sep="/")  
   value <- do.call(rbind, lapply(file, read.csv))
@@ -10,7 +10,7 @@ pollutantmean <- function(directory, pollutant, id = 1:332){
   mean_val
 }
 
-complete <- function(directory, id= 1:332){
+findcolumnwithvalues <- function(directory, id= 1:332){
   fil <- sprintf('%03d.csv', id)
  file <- paste("/Users/sreevalsansmenon/Downloads", directory, fil, sep="/")  
  value <- do.call(rbind, lapply(file, read.csv))
@@ -20,7 +20,7 @@ complete <- function(directory, id= 1:332){
  data
 }
 
-corr <- function(directory, threshold = 0){
+findcorrelation <- function(directory, threshold = 0){
   corrv <- c()
   for (i in 1:332) {
     fil <- sprintf('%03d.csv', i)
