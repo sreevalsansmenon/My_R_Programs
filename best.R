@@ -17,5 +17,5 @@ best <- function(state, outcome){
     Hospital = sort(data[(data_st==min_data),2])
     Hospital[1]
   }
-  ## Return hospital name in that state with lowest 30-day death ## rate
+  ## Return hospital name in that state with lowest 30 day death ## rate
 }
